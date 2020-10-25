@@ -1,0 +1,30 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;  
+}
+
+h1,h2,h3{
+    margin-bottom: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    margin: 1.2em 0 0;
+}

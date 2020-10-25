@@ -1,0 +1,37 @@
+@media (min-width: 600px){
+
+    .lg-screen{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .header-col-1{
+        border-bottom: none;
+    }
+
+    .card-big, .card-small{
+        width: 45%;
+    }
+
+    .toggle-themes{
+        margin-left: 1em;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    .container{
+        width: 92%;
+    }
+
+    .lg-screen{
+        flex-wrap: nowrap;
+    }
+
+    .card-big, .card-small{
+        width: 23%;
+    }
+
+}

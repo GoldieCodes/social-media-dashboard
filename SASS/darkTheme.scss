@@ -1,0 +1,159 @@
+@import "_reset.scss";
+
+$body-bg-clr: hsl(230, 17%, 14%);
+$top-bg-pattern: hsl(232, 19%, 15%);
+$card-bg-clr: hsl(228, 28%, 20%);
+$card-hover-clr: hsl(229, 26%, 30%);
+$toggle-bg-clr: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$primary-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$yt-clr: hsl(348, 97%, 39%);
+$fb-clr: hsl(208, 92%, 53%);
+$twitter-clr: hsl(203, 89%, 53%);
+$ash-text-clr: hsl(228, 34%, 66%);
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    background: $body-bg-clr;
+    color: $ash-text-clr;
+}
+
+h1,h2,h3{
+    color: white;
+    margin-top: .5em;
+}
+
+h1{
+    font-size: 36px;
+}
+
+header{
+    padding: .5em 0 5em;
+    background: $top-bg-pattern;
+}
+
+.header-col-1{
+   border-bottom: 1px solid $card-hover-clr;
+    h4{
+        margin-top: 0;
+    }
+}
+
+.header-col-2{
+    margin: 1em 0 2em;
+
+    &.flex{
+        justify-content: space-between;
+    }
+    h4{
+        margin-top: 0;
+    }
+    .toggle-themes{
+        width: 3em;
+        height: 1.6em;
+        border: none;
+        border-radius: 30px;
+        background: $toggle-bg-clr;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+            display: inline-block;
+            padding: 9px;
+            border-radius: 50%;
+            background: #fff;
+            transform: translateX(.5em);
+        }
+        &.dark-theme::before{
+            transform: translateX(-.5em);
+            background: rgb(56, 56, 97);
+        }
+        &:focus{
+            outline: none;
+        } 
+    }   
+}
+
+section{
+    position: relative;
+    bottom: 5em;
+}
+
+.icon-down, .icon-up{
+    max-height: 7px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.card-big{
+    padding: 0 1em 1em;
+    max-width: 350px;
+    background: $card-bg-clr;
+    border-top: 3px solid white;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    text-align: center;
+
+    p{
+        margin-left: 10px;
+    }
+    .flex{
+        justify-content: center;
+    }
+    .followers{
+        text-transform: uppercase;
+        letter-spacing: .25em;
+    }
+    .bottom-inscription{
+        color: $primary-green;
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    &:hover{
+        background: $card-hover-clr;
+        cursor: pointer;
+    }
+}
+
+.card-fb{
+    border-color: $fb-clr;
+}
+
+.card-twitter{
+    border-color: $twitter-clr;
+}
+
+.card-insta{
+    border-color: rgb(201, 109, 76);
+}
+
+.card-yt{
+    border-color: $yt-clr;
+    
+    .bottom-inscription{
+        color: $yt-clr;
+    }
+}
+
+.card-small{
+    padding: .5em 1.5em 1.5em;
+    max-width: 350px;
+    background: $card-bg-clr;
+    border-radius: 5px;
+    margin-top: 1.2em;
+   
+    .flex{
+        justify-content: space-between;   
+    }
+    .icon-down, .icon-up{
+        margin-top: 5.5px;
+    }
+    &:hover{
+        background: $card-hover-clr;
+        cursor: pointer;
+    }
+}
+
+@import "_responsive.scss";
